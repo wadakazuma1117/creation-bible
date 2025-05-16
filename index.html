@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>目次 - 創造の仕組み 完全バイブル</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+            padding: 1rem;
+            line-height: 1.6;
+            -webkit-text-size-adjust: 100%;
+        }
+        .main-container {
+            max-width: 1000px;
+            margin: 1rem auto;
+            background-color: #ffffff;
+            padding: clamp(1.5rem, 5vw, 2.5rem);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+        }
+        .header-main-title {
+            font-size: clamp(1.8rem, 5vw, 2.25rem);
+            font-weight: 700;
+            color: #4338ca;
+            text-align: center;
+            margin-bottom: 0.25rem;
+        }
+        .header-sub-title {
+            font-size: clamp(1rem, 3vw, 1.125rem);
+            font-weight: 500;
+            color: #6b7280;
+            text-align: center;
+            margin-bottom: 0.75rem;
+        }
+        .author-name {
+            font-size: clamp(0.875rem, 2.5vw, 1rem);
+            color: #4b5563;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .toc-page-title {
+            font-size: clamp(1.5rem, 4vw, 1.875rem);
+            font-weight: 700;
+            color: #4338ca;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        .toc-page-subtitle {
+            font-size: clamp(0.875rem, 2.5vw, 1rem);
+            font-weight: 500;
+            color: #6b7280;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        /* セクション区切りのタイトルバーは今回は削除 */
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); /* 最小幅を少し調整 */
+            gap: 1.25rem;
+        }
+        .toc-item-card {
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column; /* 中身を縦に積むのを基本に */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .toc-item-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        .toc-item-link {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column; /* タイトルと説明文を縦に積む */
+            width: 100%;
+            flex-grow: 1;
+        }
+        .item-header {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+        .item-number { /* ローマ数字なので少し調整 */
+            font-size: 0.95rem; /* 少し小さく */
+            font-weight: 600; /* 少し細く */
+            color: #6366f1;
+            margin-right: 0.6rem;
+            min-width: 30px; /* ローマ数字用に幅を調整 */
+        }
+        .toc-icon {
+            font-size: 0.9em;
+            color: #818cf8;
+            margin-right: 0.5rem;
+            line-height: 1;
+        }
+        .item-title-container {
+            flex-grow: 1;
+        }
+        .item-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1f2937;
+            line-height: 1.3;
+        }
+        .toc-item-link:hover .item-title {
+            color: #4f46e5;
+        }
+        .item-description {
+            font-size: 0.8rem;
+            color: #6b7280;
+            line-height: 1.5;
+            margin-top: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1 class="header-main-title">創造の仕組み 完全バイブル</h1>
+        <h2 class="header-sub-title">スピリチュアルな探究をするマスターのための手引き書</h2>
+        <p class="author-name">Kazuma Wada</p>
+
+        <div class="toc-page-title">目次</div>
+        <p class="toc-page-subtitle">創造の仕組み完全バイブルの全体構成</p>
+
+        <div class="toc-grid">
+            <div class="toc-item-card">
+                <a href="slide3.html" class="toc-item-link">
+                    <div class="item-header">
+                        <span class="item-number">I.</span><i class="fas fa-universal-access toc-icon"></i>
+                        <h4 class="item-title">創造の5つの普遍法則</h4>
+                    </div>
+                    <p class="item-description">宇宙創造の不変の磁石</p>
+                </a>
+            </div>
+            <div class="toc-item-card">
+                <a href="slide4.html" class="toc-item-link">
+                    <div class="item-header">
+                        <span class="item-number">II.</span><i class="fas fa-magic toc-icon"></i>
+                        <h4 class="item-title">ワクワクの公式</h4>
+                    </div>
+                    <p class="item-description">人生を喜びで創るための実践ガイド</p>
+                </a>
+            </div>
+            <div class="toc-item-card">
+                <a href="slide5.html" class="toc-item-link">
+                    <div class="item-header">
+                        <span class="item-number">III.</span><i class="fas fa-layer-group toc-icon"></i>
+                        <h4 class="item-title">存在の構造: 次元と密度</h4>
+                    </div>
+                    <p class="item-description">意識の発展段階としての次元と密度の概念</p>
+                </a>
+            </div>
+            <div class="toc-item-card">
+                <a href="slide6.html" class="toc-item-link">
+                    <div class="item-header">
+                        <span class="item-number">IV.</span><i class="fas fa-brain toc-icon"></i>
+                        <h4 class="item-title">意識の階層: あなたの多次元的自己</h4>
+                    </div>
+                    <p class="item-description">意識の階層構造</p>
+                </a>
+            </div>
+            <div class="toc-item-card">
+                <a href="slide7.html" class="toc-item-link">
+                    <div class="item-header">
+                        <span class="item-number">V.</span><i class="fas fa-equals toc-icon"></i>
+                        <h4 class="item-title">観念が現実を創る - マスター方程式</h4>
+                    </div>
+                    <p class="item-description">現実を形成するプロセス</p>
+                </a>
+            </div>
+            <div class="toc-item-card">
+                <a href="slide8.html" class="toc-item-link">
+                    <div class="item-header">
+                        <span class="item-number">VI.</span><i class="fas fa-lightbulb toc-icon"></i>
+                        <h4 class="item-title">創造主としての意識のメカニズム</h4>
+                    </div>
+                    <p class="item-description">ハイヤーマインドとフィジカルマインドの関係</p>
+                </a>
+            </div>
+            <div class="toc-item-card">
+                <a href="slide9.html" class="toc-item-link">
+                    <div class="item-header">
+                        <span class="item-number">VII.</span><i class="fas fa-project-diagram toc-icon"></i>
+                        <h4 class="item-title">現実のシフトとパラレルリアリティ</h4>
+                    </div>
+                    <p class="item-description">パラレルリアリティの概念</p>
+                </a>
+            </div>
+            <div class="toc-item-card">
+                <a href="slide10.html" class="toc-item-link">
+                    <div class="item-header">
+                        <span class="item-number">VIII.</span><i class="fas fa-cogs toc-icon"></i>
+                        <h4 class="item-title">現実創造のプロセス</h4>
+                    </div>
+                    <p class="item-description">ステップバイステップガイド</p>
+                </a>
+            </div>
+            <div class="toc-item-card">
+                <a href="slide11.html" class="toc-item-link">
+                    <div class="item-header">
+                        <span class="item-number">IX.</span><i class="fas fa-tools toc-icon"></i>
+                        <h4 class="item-title">現実創造スキルを高めるテクニック</h4>
+                    </div>
+                    <p class="item-description">瞑想、視覚化、アファメーション、感謝の練習など</p>
+                </a>
+            </div>
+            <div class="toc-item-card">
+                <a href="slide12.html" class="toc-item-link">
+                    <div class="item-header">
+                        <span class="item-number">X.</span><i class="fas fa-unlock-alt toc-icon"></i>
+                        <h4 class="item-title">制限的信念を解放し、可能性を広げる</h4>
+                    </div>
+                    <p class="item-description">制限的信念の特定と書き換え方</p>
+                </a>
+            </div>
+            <div class="toc-item-card">
+                <a href="slide13.html" class="toc-item-link">
+                    <div class="item-header">
+                        <span class="item-number">XI.</span><i class="fas fa-puzzle-piece toc-icon"></i>
+                        <h4 class="item-title">創造の仕組み・実践応用ガイド</h4>
+                    </div>
+                    <p class="item-description">キャリア、人間関係、健康、豊かさなど、日常生活における応用</p>
+                </a>
+            </div>
+            <div class="toc-item-card">
+                <a href="slide14.html" class="toc-item-link">
+                    <div class="item-header">
+                        <span class="item-number">XII.</span><i class="fas fa-clipboard-check toc-icon"></i>
+                        <h4 class="item-title">創造の仕組み 実践に向けて</h4>
+                    </div>
+                    <p class="item-description">今すぐ始められる3つのステップ</p>
+                </a>
+            </div>
+             <div class="toc-item-card">
+                <a href="slide15.html" class="toc-item-link"> {/* PDFのp.15が最後の目次項目 */}
+                    <div class="item-header">
+                        <span class="item-number">XIII.</span><i class="fas fa-shoe-prints toc-icon"></i>
+                        <h4 class="item-title">創造主としての旅を始めよう</h4>
+                    </div>
+                    <p class="item-description">あなたの中に眠る無限の可能性を解き放つ</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
