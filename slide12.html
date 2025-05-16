@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X. 制限的信念を解放し、可能性を広げる</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(to bottom right, #f5f7fa, #edf2f7);
+            position: relative;
+
+            padding: 30px 40px;
+        }
+        .title {
+            color: #2d3748;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+        .subtitle {
+            color: #4a5568;
+            font-size: 20px;
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+        .divider {
+            width: 80px;
+            height: 4px;
+            background-color: #f6ad55;
+            margin: 10px 0 20px;
+        }
+        .content-container {
+            display: flex;
+            gap: 20px;
+            height: calc(100% - 80px);
+        }
+        .left-column, .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .panel {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            padding: 15px;
+            flex: 1;
+        }
+        .panel-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .panel-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            flex-shrink: 0;
+            font-size: 16px;
+        }
+        .panel-title {
+            font-weight: 600;
+            font-size: 18px;
+            color: #2d3748;
+        }
+        .section-title {
+            font-weight: 600;
+            font-size: 16px;
+            color: #2d3748;
+            margin: 12px 0 8px;
+        }
+        .section-content {
+            font-size: 13px;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+        .power-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 8px;
+        }
+        .power-list li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 6px;
+            font-size: 13px;
+            color: #4a5568;
+        }
+        .power-list li:before {
+            content: "•";
+            position: absolute;
+            left: 6px;
+            color: #f6ad55;
+        }
+        .belief-categories {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 8px;
+        }
+        .belief-card {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        .belief-card-title {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .belief-card-title i {
+            margin-right: 6px;
+        }
+        .belief-example {
+            font-size: 12px;
+            color: #4a5568;
+            font-style: italic;
+            margin-bottom: 3px;
+        }
+        .belief-source {
+            font-size: 11px;
+            color: #718096;
+        }
+        .identification-methods {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 8px;
+        }
+        .method-card {
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #f7fafc;
+        }
+        .method-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: #2d3748;
+            margin-bottom: 4px;
+        }
+        .method-desc {
+            font-size: 12px;
+            color: #4a5568;
+        }
+        .techniques-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        .technique-item {
+            display: flex;
+            background-color: #f7fafc;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        .technique-number {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #f6ad55;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        .technique-content {
+            flex: 1;
+        }
+        .technique-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: #2d3748;
+            margin-bottom: 3px;
+        }
+        .technique-comparison {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 4px;
+        }
+        .limitation, .expansion {
+            font-size: 12px;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+        .limitation {
+            background-color: #fed7d7;
+            color: #c53030;
+        }
+        .expansion {
+            background-color: #c6f6d5;
+            color: #2f855a;
+        }
+        .technique-desc {
+            font-size: 12px;
+            color: #4a5568;
+        }
+        .self-worth {
+            background-color: #ebf4ff;
+            border-color: #c3dafe;
+        }
+        .success-ability {
+            background-color: #fefcbf;
+            border-color: #f6e05e;
+        }
+        .wealth {
+            background-color: #e6fffa;
+            border-color: #b2f5ea;
+        }
+        .relationship {
+            background-color: #fed7e2;
+            border-color: #fbb6ce;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <h1 class="title">X. 制限的信念を解放し、可能性を広げる</h1>
+        <h2 class="subtitle">あなたの潜在能力を開花させるための心の枠組み変革</h2>
+        <div class="divider"></div>
+        
+        <div class="content-container">
+            <!-- 左側カラム -->
+            <div class="left-column">
+                <!-- 信念のメカニズム -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <div class="panel-icon" style="background-color: #feebcb; color: #dd6b20;">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="panel-title">信念が現実を形成するメカニズム</div>
+                    </div>
+                    
+                    <div class="section-title">信念の本質:</div>
+                    <div class="section-content">
+                        信念は深層的な信念体系です。現実の「フィルター」となり、経験と知覚を決定し、可能性の範囲を設定します。
+                    </div>
+                    
+                    <div class="section-title">信念のパワー:</div>
+                    <ul class="power-list">
+                        <li>チャンス、選択、自由など「見える」ものを決定</li>
+                        <li>期待を形成し、それに応じた現実を引き寄せる</li>
+                        <li>感情と思考の強度を決め、行動を引き出す</li>
+                        <li>創造的能力を引き出すか制限するか決定</li>
+                        <li>振動周波数と引き寄せるものを決定</li>
+                    </ul>
+                </div>
+                
+                <!-- 制限的信念のカテゴリー -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <div class="panel-icon" style="background-color: #fed7d7; color: #e53e3e;">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="panel-title">制限的信念の主要カテゴリー</div>
+                    </div>
+                    
+                    <div class="belief-categories">
+                        <div class="belief-card self-worth">
+                            <div class="belief-card-title">
+                                <i class="fas fa-user" style="color: #4c51bf;"></i>
+                                自己価値に関する信念
+                            </div>
+                            <div class="belief-example">"私にはこれをする価値がない"</div>
+                            <div class="belief-example">"特別な理由がなければ愛されない"</div>
+                            <div class="belief-source">自尊心、周囲からの期待から生じる深層信念</div>
+                        </div>
+                        
+                        <div class="belief-card success-ability">
+                            <div class="belief-card-title">
+                                <i class="fas fa-trophy" style="color: #d69e2e;"></i>
+                                成功と能力に関する信念
+                            </div>
+                            <div class="belief-example">"私には才能が足りない"</div>
+                            <div class="belief-example">"成功には苦労が必要"</div>
+                            <div class="belief-source">学校教育、仕事体験から生じる能力信念</div>
+                        </div>
+                        
+                        <div class="belief-card wealth">
+                            <div class="belief-card-title">
+                                <i class="fas fa-coins" style="color: #38a169;"></i>
+                                豊かさに関する信念
+                            </div>
+                            <div class="belief-example">"お金は稼ぐのが難しい"</div>
+                            <div class="belief-example">"お金持ちは悪い人になる"</div>
+                            <div class="belief-source">家庭の価値観から生じる豊かさへの信念</div>
+                        </div>
+                        
+                        <div class="belief-card relationship">
+                            <div class="belief-card-title">
+                                <i class="fas fa-heart" style="color: #d53f8c;"></i>
+                                関係性に関する信念
+                            </div>
+                            <div class="belief-example">"親密になると傷つけられる"</div>
+                            <div class="belief-example">"信頼すると裏切られる"</div>
+                            <div class="belief-source">過去の関係、家族環境からの影響</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 右側カラム -->
+            <div class="right-column">
+                <!-- 制限的信念の特定方法 -->
+                <div class="panel" style="flex: 0.8;">
+                    <div class="panel-header">
+                        <div class="panel-icon" style="background-color: #bee3f8; color: #3182ce;">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="panel-title">制限的信念を特定する4つの方法</div>
+                    </div>
+                    
+                    <div class="identification-methods">
+                        <div class="method-card">
+                            <div class="method-title">原因トリガー法</div>
+                            <div class="method-desc">「あなたをダメにしたのは誰か？」と問い、特定の人物に思い当たるなら、その人物が何かを植え付けたかもしれない。</div>
+                        </div>
+                        
+                        <div class="method-card">
+                            <div class="method-title">内部対話認識法</div>
+                            <div class="method-desc">「私は〜だから」「こうなってしまう」などの内なる会話は制限的な信念の現れ。</div>
+                        </div>
+                        
+                        <div class="method-card">
+                            <div class="method-title">パターン認識法</div>
+                            <div class="method-desc">人生の繰り返しパターンを観察。同じ関係性や問題が繰り返し起こる理由を探る。</div>
+                        </div>
+                        
+                        <div class="method-card">
+                            <div class="method-title">ワークアップ法</div>
+                            <div class="method-desc">目標達成時に抱く不安から「達成して怖いことは何か」と問いかけ、隠れた信念を発見。</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 制限的信念を書き換えるテクニック -->
+                <div class="panel" style="flex: 1.2;">
+                    <div class="panel-header">
+                        <div class="panel-icon" style="background-color: #c6f6d5; color: #38a169;">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <div class="panel-title">制限的信念を書き換える5つの強力テクニック</div>
+                    </div>
+                    
+                    <div class="techniques-list">
+                        <div class="technique-item">
+                            <div class="technique-number">1</div>
+                            <div class="technique-content">
+                                <div class="technique-title">認知的再構築法</div>
+                                <div class="technique-comparison">
+                                    <span class="limitation">制限: "才能がないからできない"</span>
+                                    <span class="expansion">拡張: "練習で能力開発できる"</span>
+                                </div>
+                                <div class="technique-desc">古い信念を明確化し、肯定的な新しい信念を作成。「確かに」と思える根拠を持つ。</div>
+                            </div>
+                        </div>
+                        
+                        <div class="technique-item">
+                            <div class="technique-number">2</div>
+                            <div class="technique-content">
+                                <div class="technique-title">証拠収集チャレンジ</div>
+                                <div class="technique-desc">「本当である証拠は？」「間違いの証拠は？」と自問。多くの制限的信念は客観的証拠がなく単なる解釈。</div>
+                            </div>
+                        </div>
+                        
+                        <div class="technique-item">
+                            <div class="technique-number">3</div>
+                            <div class="technique-content">
+                                <div class="technique-title">質問変換法</div>
+                                <div class="technique-comparison">
+                                    <span class="limitation">制限: "なぜ失敗するのか?"</span>
+                                    <span class="expansion">拡張: "次回どう改善できる?"</span>
+                                </div>
+                                <div class="technique-desc">自動的な質問を建設的な方向に変換。より良い質問で、より良い答えを引き出す。</div>
+                            </div>
+                        </div>
+                        
+                        <div class="technique-item">
+                            <div class="technique-number">4</div>
+                            <div class="technique-content">
+                                <div class="technique-title">役割モデリング法</div>
+                                <div class="technique-desc">"尊敬する人ならどう対応する?" と自問。異なる視点から見ることで新たな可能性が開ける。</div>
+                            </div>
+                        </div>
+                        
+                        <div class="technique-item">
+                            <div class="technique-number">5</div>
+                            <div class="technique-content">
+                                <div class="technique-title">枠組みリフレーミング法</div>
+                                <div class="technique-comparison">
+                                    <span class="limitation">古い: "私は失敗者"</span>
+                                    <span class="expansion">新: "私は成長途上"</span>
+                                </div>
+                                <div class="technique-desc">ポジティブな新しい枠組みを作り、それが真実である理由と証拠を意識的に選択する。</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

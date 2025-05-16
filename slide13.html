@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XI. 創造の仕組み - 実践応用ガイド</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(to bottom right, #f5f7fa, #edf2f7);
+            position: relative;
+
+            padding: 30px 40px;
+        }
+        .title {
+            color: #2d3748;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+        .subtitle {
+            color: #4a5568;
+            font-size: 20px;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+        .divider {
+            width: 80px;
+            height: 4px;
+            background-color: #48bb78;
+            margin: 10px 0 20px;
+        }
+        .intro-text {
+            color: #4a5568;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            max-width: 95%;
+        }
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        .application-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            padding: 20px;
+            height: 100%;
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 12px;
+            font-size: 20px;
+        }
+        .card-title {
+            font-weight: 600;
+            font-size: 20px;
+            color: #2d3748;
+        }
+        .practice-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .practice-item {
+            display: flex;
+            margin-bottom: 5px;
+        }
+        .practice-number {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: 600;
+            margin-right: 10px;
+            flex-shrink: 0;
+            font-size: 14px;
+        }
+        .practice-content {
+            flex: 1;
+        }
+        .practice-title {
+            font-weight: 600;
+            font-size: 16px;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+        .practice-desc {
+            font-size: 13px;
+            color: #4a5568;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+        .practice-example {
+            display: flex;
+            margin-top: 5px;
+            font-size: 12px;
+        }
+        .before-example {
+            background-color: #fed7d7;
+            color: #c53030;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+        .after-example {
+            background-color: #c6f6d5;
+            color: #2f855a;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+        .sub-practices {
+            margin-top: 8px;
+            margin-left: 5px;
+        }
+        .sub-practice-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 5px;
+            font-size: 12px;
+            color: #4a5568;
+        }
+        .sub-practice-item i {
+            margin-right: 8px;
+            color: #48bb78;
+            margin-top: 3px;
+            font-size: 10px;
+        }
+        .wealth-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 5px;
+            margin-bottom: 8px;
+        }
+        .wealth-category {
+            font-size: 11px;
+            background-color: #e6fffa;
+            padding: 2px 8px;
+            border-radius: 12px;
+            color: #2c7a7b;
+        }
+        /* Card specific colors */
+        .career-card .card-icon {
+            background-color: #ebf8ff;
+            color: #3182ce;
+        }
+        .career-card .practice-number {
+            background-color: #3182ce;
+        }
+        .relationship-card .card-icon {
+            background-color: #fae5f0;
+            color: #d53f8c;
+        }
+        .relationship-card .practice-number {
+            background-color: #d53f8c;
+        }
+        .health-card .card-icon {
+            background-color: #e6fffa;
+            color: #38a169;
+        }
+        .health-card .practice-number {
+            background-color: #38a169;
+        }
+        .wealth-card .card-icon {
+            background-color: #fefcbf;
+            color: #d69e2e;
+        }
+        .wealth-card .practice-number {
+            background-color: #d69e2e;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <h1 class="title">XI. 創造の仕組み - 実践応用ガイド</h1>
+        <h2 class="subtitle">学んだ原理を日常生活のさまざまな領域で活かす方法</h2>
+        <div class="divider"></div>
+        
+        <p class="intro-text">
+            「創造の原理は実生活のあらゆる側面に適用できる普遍的な法則です。これは単なる理論ではなく、日々の具体的な変化を通じて検証され、あなたの現実を変容させる力を持っています。」
+        </p>
+        
+        <div class="cards-container">
+            <!-- キャリア・仕事への応用 -->
+            <div class="application-card career-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="card-title">キャリア・仕事への応用</h3>
+                </div>
+                
+                <div class="practice-list">
+                    <div class="practice-item">
+                        <div class="practice-number">1</div>
+                        <div class="practice-content">
+                            <div class="practice-title">目的と情熱の明確化</div>
+                            <div class="practice-desc">
+                                実践: "私が本当に興味を感じることや、毎日どんな活動に関心を持ちたいか" を分析で20個リストアップする
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <div class="practice-number">2</div>
+                        <div class="practice-content">
+                            <div class="practice-title">職場の信念変革</div>
+                            <div class="practice-desc">
+                                制限的な信念から拡張的な信念へと変換する
+                            </div>
+                            <div class="practice-example">
+                                <span class="before-example">制限的: 私の業界では成功は難しい</span>
+                                <span class="after-example">拡張的: 私はどんな環境でも価値を生み出せる</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <div class="practice-number">3</div>
+                        <div class="practice-content">
+                            <div class="practice-title">振動整合と具体的行動</div>
+                            <div class="practice-desc">
+                                毎日の小さな実践で理想のキャリアへの振動を整える
+                            </div>
+                            <div class="sub-practices">
+                                <div class="sub-practice-item">
+                                    <i class="fas fa-circle"></i>
+                                    <span>理想の職場に関する具体的な視覚化</span>
+                                </div>
+                                <div class="sub-practice-item">
+                                    <i class="fas fa-circle"></i>
+                                    <span>好きなプロフェッショナルとコーチチャットをする</span>
+                                </div>
+                                <div class="sub-practice-item">
+                                    <i class="fas fa-circle"></i>
+                                    <span>スキルアップのための小さな習慣に取り組む</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 人間関係への応用 -->
+            <div class="application-card relationship-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="card-title">人間関係への応用</h3>
+                </div>
+                
+                <div class="practice-list">
+                    <div class="practice-item">
+                        <div class="practice-number">1</div>
+                        <div class="practice-content">
+                            <div class="practice-title">反射の法則を理解する</div>
+                            <div class="practice-desc">
+                                本当の問題は自分の内側の反射です。「相手が変わる」のではなく、自分の内側の感情や信念を変えることに焦点を当てる。
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <div class="practice-number">2</div>
+                        <div class="practice-content">
+                            <div class="practice-title">理想の関係性の明確なビジョン創造</div>
+                            <div class="practice-desc">実践: 理想の関係性で交わしている会話、感じる感情、経験を詳細に定義し、「こう感じたい」と「どのような関係を持ちたいか」の両方を考える。</div>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <div class="practice-number">3</div>
+                        <div class="practice-content">
+                            <div class="practice-title">自己との関係を優先する</div>
+                            <div class="practice-desc">
+                                毎日5分間の自己愛の実践を通じて自己対話を見直し、内なる批判を慈悲と対話にシフトし、自己価値を確立する。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 健康・ウェルビーイングへの応用 -->
+            <div class="application-card health-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="card-title">健康・ウェルビーイングへの応用</h3>
+                </div>
+                
+                <div class="practice-list">
+                    <div class="practice-item">
+                        <div class="practice-number">1</div>
+                        <div class="practice-content">
+                            <div class="practice-title">身体インテリジェンスとの対話</div>
+                            <div class="practice-desc">
+                                実践: 体を意識的に観察しながら、毎日対話する。「この身体は自己治癒能力を持ち、私のことを愛している」という信念を育てる。
+                            </div>
+                            <div class="sub-practices">
+                                <div class="sub-practice-item">
+                                    <i class="fas fa-circle"></i>
+                                    <span>質問する</span>
+                                </div>
+                                <div class="sub-practice-item">
+                                    <i class="fas fa-circle"></i>
+                                    <span>聴く</span>
+                                </div>
+                                <div class="sub-practice-item">
+                                    <i class="fas fa-circle"></i>
+                                    <span>応答する</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <div class="practice-number">2</div>
+                        <div class="practice-content">
+                            <div class="practice-title">健康の青写真を書き換える</div>
+                            <div class="practice-desc">
+                                健康に関する既存の信念を特定し、より支持的な信念に変換する
+                            </div>
+                            <div class="practice-example">
+                                <span class="before-example">制限的: 疲労は避けられない</span>
+                                <span class="after-example">拡張的: 健康は私の選択の結果</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <div class="practice-number">3</div>
+                        <div class="practice-content">
+                            <div class="practice-title">感情の生化学的力を活用</div>
+                            <div class="practice-desc">
+                                喜び、元気さ、健康の感情状態を意図的に養います。感情は強力な化学的反応を引き起こし、実際の身体機能に影響します。
+                            </div>
+                            <div class="sub-practices">
+                                <div class="sub-practice-item">
+                                    <i class="fas fa-circle"></i>
+                                    <span>朝に5分間、完璧な健康状態にいる自分を想像し、そのときの感覚、エネルギーレベル、動きの軽やかさを具体的に体感する</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 豊かさと富の創造への応用 -->
+            <div class="application-card wealth-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3 class="card-title">豊かさと富の創造への応用</h3>
+                </div>
+                
+                <div class="practice-list">
+                    <div class="practice-item">
+                        <div class="practice-number">1</div>
+                        <div class="practice-content">
+                            <div class="practice-title">豊かさの内側の真実を拡張</div>
+                            <div class="practice-desc">
+                                豊かさを単なる金銭だけでなく、多次元的に捉える
+                            </div>
+                            <div class="wealth-categories">
+                                <span class="wealth-category">経済的自由</span>
+                                <span class="wealth-category">時間的余裕</span>
+                                <span class="wealth-category">選択と活力</span>
+                                <span class="wealth-category">人間関係</span>
+                                <span class="wealth-category">精神的体験</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <div class="practice-number">2</div>
+                        <div class="practice-content">
+                            <div class="practice-title">お金に関する信念のリプログラミング</div>
+                            <div class="practice-desc">
+                                子供時代に受け継いだお金に関する信念を振り返り、それらが現在のお金との関係にどう影響しているかを検証
+                            </div>
+                            <div class="practice-example">
+                                <span class="before-example">制限的: お金は汚くて稀少</span>
+                                <span class="after-example">拡張的: お金は豊かさのエネルギー/価値交換のツール</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-item">
+                        <div class="practice-number">3</div>
+                        <div class="practice-content">
+                            <div class="practice-title">豊かさの振動を日常統合</div>
+                            <div class="practice-desc">
+                                日々の生活の中で、豊かさの振動を意図的に感じ、日常習慣に取り入れる
+                            </div>
+                            <div class="sub-practices">
+                                <div class="sub-practice-item">
+                                    <i class="fas fa-circle"></i>
+                                    <span>入金時には毎回感謝する</span>
+                                </div>
+                                <div class="sub-practice-item">
+                                    <i class="fas fa-circle"></i>
+                                    <span>公園や自然散策を「豊富」体験と捉える</span>
+                                </div>
+                                <div class="sub-practice-item">
+                                    <i class="fas fa-circle"></i>
+                                    <span>プレゼントする際、循環するエネルギーの流れを実感する</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VII. 現実のシフトとパラレルリアリティ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(to bottom right, #f5f7fa, #edf2f7);
+            position: relative;
+
+            padding: 40px 50px;
+        }
+        .title {
+            color: #2d3748;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1.2;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            color: #4a5568;
+            font-size: 20px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        .divider {
+            width: 80px;
+            height: 4px;
+            background-color: #4299e1;
+            margin: 15px 0 25px;
+        }
+        .main-container {
+            display: flex;
+            gap: 20px;
+        }
+        .left-column, .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .panel {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .panel-title {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 18px;
+            color: #2b6cb0;
+            margin-bottom: 15px;
+        }
+        .panel-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        .blue-icon {
+            background-color: #ebf8ff;
+            color: #4299e1;
+        }
+        .purple-icon {
+            background-color: #e9d8fd;
+            color: #805ad5;
+        }
+        .green-icon {
+            background-color: #c6f6d5;
+            color: #38a169;
+        }
+        .pink-icon {
+            background-color: #fed7e2;
+            color: #d53f8c;
+        }
+        .panel-content {
+            font-size: 14px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        .reality-cards {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .reality-card {
+            background-color: #f7fafc;
+            border-radius: 10px;
+            padding: 15px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .reality-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .reality-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+        .reality-description {
+            font-size: 12px;
+            color: #718096;
+        }
+        .shift-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+        .shift-box {
+            background-color: #f7fafc;
+            border-radius: 10px;
+            padding: 15px;
+            width: 48%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .shift-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+        .shift-text {
+            font-size: 13px;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+        .mechanism-item {
+            margin-bottom: 15px;
+        }
+        .mechanism-title {
+            font-weight: 600;
+            font-size: 15px;
+            color: #2d3748;
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .mechanism-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+        }
+        .mechanism-text {
+            font-size: 13px;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+        .bullet-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        .bullet-list li {
+            font-size: 13px;
+            color: #4a5568;
+            margin-bottom: 8px;
+        }
+        .shift-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            position: relative;
+        }
+        .step {
+            text-align: center;
+            width: 22%;
+            position: relative;
+            z-index: 2;
+        }
+        .step-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 auto 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        .step-title {
+            font-weight: 600;
+            font-size: 13px;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+        .step-description {
+            font-size: 11px;
+            color: #718096;
+        }
+        .step-arrow {
+            position: absolute;
+            top: 20px;
+            left: 22%;
+            width: 56%;
+            z-index: 1;
+            color: #cbd5e0;
+            font-size: 24px;
+            text-align: center;
+        }
+        .superscript {
+            vertical-align: super;
+            font-size: 65%;
+        }
+    </style>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script><script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script></head>
+<body>
+    <div class="slide">
+        <h1 class="title">VII. 現実のシフトとパラレルリアリティ</h1>
+        <h2 class="subtitle">無限の可能性と瞬間的な現実創造のメカニズム</h2>
+        <div class="divider"></div>
+        
+        <div class="main-container">
+            <div class="left-column">
+                <!-- パラレルリアリティの基本概念 -->
+                <div class="panel">
+                    <div class="panel-title">
+                        <div class="panel-icon blue-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        パラレルリアリティの基本概念
+                    </div>
+                    <div class="panel-content">
+                        <p>無限の数の並行現実が同時に存在しており、個人は1秒間に何千億回（実際には10<span class="superscript">43</span>回）もこれらの現実間を「シフト」しています。これが、連続的な動きと時間の錯覚を生み出す仕組みです。</p>
+                        <p style="margin-top: 10px;">並行現実の多次元モデル: 想像してみてください。あなたの意識は、無数の可能性の海の中で輝く光点のようなものです。その周りには、さまざまなバージョンの現実が同心円状に広がっています。各円はそれぞれ異なるテーマ（キャリア成功、豊かな人間関係、経済的豊かさ、知的成長、冒険など）の可能性を表しています。</p>
+                    </div>
+                    
+                    <div class="reality-cards">
+                        <div class="reality-card">
+                            <div class="reality-icon" style="background-color: #ebf8ff; color: #4299e1;">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="reality-title">キャリア成功の現実</div>
+                            <div class="reality-description">職業的成功シナリオ</div>
+                        </div>
+                        
+                        <div class="reality-card">
+                            <div class="reality-icon" style="background-color: #fed7e2; color: #d53f8c;">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="reality-title">いい人間関係の現実</div>
+                            <div class="reality-description">深い絆と親密さ</div>
+                        </div>
+                        
+                        <div class="reality-card">
+                            <div class="reality-icon" style="background-color: #c6f6d5; color: #38a169;">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="reality-title">経済的豊かさの現実</div>
+                            <div class="reality-description">様々な豊かさレベル</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- シフトのメカニズム -->
+                <div class="panel">
+                    <div class="panel-title">
+                        <div class="panel-icon blue-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        シフトのメカニズム
+                    </div>
+                    
+                    <div class="shift-container">
+                        <div class="shift-box">
+                            <div class="shift-text">
+                                あなたは毎秒、10<span class="superscript">43</span>回の頻度で現実のフレームをシフトしています。連続しているように感じるのは、私たちの意識構造が次の「フレーム」への移行を滑らかにしているからです。振動数が変わると、異なるフレームへの移行を体験します。
+                            </div>
+                        </div>
+                        
+                        <div class="shift-box">
+                            <div class="shift-text">
+                                意識のシフトは物理的な形体ではなく、あなたの意識が異なる現実フレームから別の現実フレームへとシフトしていくこと。あなたは実に瞬時に自己を「古い」世界から「新しい」世界へとシフトしています。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-column">
+                <!-- 現実構築の根本メカニズム -->
+                <div class="panel">
+                    <div class="panel-title">
+                        <div class="panel-icon blue-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        現実構築の根本メカニズム
+                    </div>
+                    
+                    <div class="mechanism-item">
+                        <div class="mechanism-title">
+                            <div class="mechanism-icon" style="background-color: #fefcbf; color: #d69e2e;">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            プライム・ラディアント
+                        </div>
+                        <div class="mechanism-text">
+                            創造における全てのものを形成する、根源的な統一の粒子または意識単位です。無限の密度で移動し、時間と空間の影響を受けず、同じ「時間」に「あらゆる場所」に存在します。
+                        </div>
+                    </div>
+                    
+                    <div class="mechanism-item">
+                        <div class="mechanism-title">
+                            <div class="mechanism-icon" style="background-color: #c6f6d5; color: #38a169;">
+                                <i class="fas fa-dot-circle"></i>
+                            </div>
+                            ゼロ・ポイント
+                        </div>
+                        <div class="mechanism-text">現実がブランク状態（1秒の1043分の1）という時の現実時間間隔で顕現し、そこから新動作された中性的な状態、または「無」の状態を指します。</div>
+                    </div>
+                </div>
+                
+                <!-- なぜ現実が個体的に見えるのか？ -->
+                <div class="panel">
+                    <div class="panel-title">
+                        <div class="panel-icon blue-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        なぜ現実が個体的に見えるのか？
+                    </div>
+                    
+                    <div class="panel-content">
+                        <p>私たちの日常的な現実の連続性と固体性は錯覚です。実際には、以下のプロセスが同時に行われています：</p>
+                        
+                        <ul class="bullet-list">
+                            <li>現実は1秒間に1043回（プランク時間）ゼロポイントに顕現し、再創造される。</li>
+                            <li>プライム・ラディアントが全ての物質を形成し、その次の瞬間の密度を決定する</li>
+                            <li>振動的に調整した「静的な可能性フレーム」を選択シフトすることで連続性を感じる</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- パラレルリアリティへの意識的なシフト方法 -->
+                <div class="panel">
+                    <div class="panel-title">
+                        <div class="panel-icon blue-icon">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        パラレルリアリティへの意識的なシフト方法
+                    </div>
+                    
+                    <div class="step-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                        <i class="fas fa-arrow-right"></i>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    
+                    <div class="shift-steps">
+                        <div class="step">
+                            <div class="step-icon" style="background-color: #ebf8ff; color: #4299e1;">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="step-title">認識する</div>
+                            <div class="step-description">現実が流動的で、1秒に何十億回も再創造されていることを認識する</div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-icon" style="background-color: #e9d8fd; color: #805ad5;">
+                                <i class="fas fa-walking"></i>
+                            </div>
+                            <div class="step-title">行動する</div>
+                            <div class="step-description">望む現実に対する振動数に意識的にシフトする</div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-icon" style="background-color: #fed7e2; color: #d53f8c;">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="step-title">感じる</div>
+                            <div class="step-description">望む現実がすでにそこにあるかのように感じる</div>
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-icon" style="background-color: #c6f6d5; color: #38a169;">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="step-title">許容する</div>
+                            <div class="step-description">シフトが自然に起こることを信頼し、過程を信頼する</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

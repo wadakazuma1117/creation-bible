@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IV. 意識の階層：あなたの多次元的自己</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(to bottom right, #f5f7fa, #edf2f7);
+            position: relative;
+
+            padding: 40px 50px;
+        }
+        .title {
+            color: #2d3748;
+            font-weight: 700;
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            color: #4a5568;
+            font-size: 22px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        .divider {
+            width: 80px;
+            height: 4px;
+            background-color: #9f7aea;
+            margin: 15px 0 25px;
+        }
+        .description {
+            color: #4a5568;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            max-width: 1180px;
+        }
+        .main-container {
+            display: flex;
+            gap: 20px;
+            min-height: 450px;
+        }
+        .left-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .right-column {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .section-title {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 18px;
+            color: #553c9a;
+            margin-bottom: 15px;
+        }
+        .section-title i {
+            margin-right: 8px;
+            color: #9f7aea;
+        }
+        .consciousness-levels {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .level-card {
+            background-color: #f3ebff;
+            border-radius: 8px;
+            padding: 12px 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .level-number {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: #9f7aea;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        .level-content {
+            flex-grow: 1;
+        }
+        .level-title {
+            font-weight: 600;
+            font-size: 16px;
+            color: #553c9a;
+            margin-bottom: 4px;
+        }
+        .level-description {
+            font-size: 13px;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+        .process-panel {
+            background-color: white;
+            border-radius: 12px;
+            padding: 15px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        .panel-title {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 18px;
+            color: #2d3748;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        .panel-title i {
+            margin-right: 10px;
+            color: #9f7aea;
+        }
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+        .step-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        .step-content {
+            flex-grow: 1;
+        }
+        .step-title {
+            font-weight: 600;
+            font-size: 15px;
+            color: #2d3748;
+            margin-bottom: 3px;
+        }
+        .step-description {
+            font-size: 13px;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+        .relationship-card {
+            flex: 1;
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .card-header {
+            font-weight: 600;
+            font-size: 15px;
+            color: #2d3748;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .card-header i {
+            margin-right: 8px;
+        }
+        .card-content {
+            font-size: 13px;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+        .purple-icon {
+            background-color: #e9d8fd;
+            color: #805ad5;
+        }
+        .blue-icon {
+            background-color: #bee3f8;
+            color: #3182ce;
+        }
+        .green-icon {
+            background-color: #c6f6d5;
+            color: #38a169;
+        }
+        .orange-icon {
+            background-color: #feebc8;
+            color: #dd6b20;
+        }
+        .yellow-icon {
+            background-color: #fefcbf;
+            color: #d69e2e;
+        }
+        .pink-icon {
+            background-color: #fed7e2;
+            color: #d53f8c;
+        }
+        .red-icon {
+            background-color: #fed7d7;
+            color: #e53e3e;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <h1 class="title">IV. 意識の階層：あなたの多次元的自己</h1>
+        <h2 class="subtitle">あなたの存在のさまざまなレベルと現実創造における役割</h2>
+        <div class="divider"></div>
+        
+        <p class="description">
+            この9レベルの意識モデルは、個々の意識（オーバーソウルから発する）が情報を処理し、最終的に経験する現実を投影する内側の「ソフトウェア」またはオペレーティングシステムを表しています。高次のレベルがコードとなるプログラミングと背景を提供し、低次のレベルがこれらと相互作用して特定の物理的経験を生成します。
+        </p>
+        
+        <div class="main-container">
+            <div class="left-column">
+                <div class="section-title">
+                    <i class="fas fa-layer-group"></i> 意識の9つの階層
+                </div>
+                
+                <div class="consciousness-levels">
+                    <div class="level-card">
+                        <div class="level-number">1</div>
+                        <div class="level-content">
+                            <h3 class="level-title">オーバーソウル</h3>
+                            <p class="level-description">すべての個々の魂がそこから発する究極の統一された意識の源。経験のための基本的な枠組みと価値を設定</p>
+                        </div>
+                    </div>
+                    
+                    <div class="level-card">
+                        <div class="level-number">2</div>
+                        <div class="level-content">
+                            <h3 class="level-title">個々の魂</h3>
+                            <p class="level-description">
+                                オーバーソウルのユニークな表現形式であり、前世と現世の断片を結ぶ。より大きな文脈で以前の転生も記録
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="level-card">
+                        <div class="level-number">3</div>
+                        <div class="level-content">
+                            <h3 class="level-title">ハイヤーマインド</h3>
+                            <p class="level-description">
+                                魂の物理的経験能力の一環として機能。より広い視点、理解、感謝、そしてワクワクを感じる。魂の意図を翻訳
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="level-card">
+                        <div class="level-number">4</div>
+                        <div class="level-content">
+                            <h3 class="level-title">現実のテンプレートレベル</h3>
+                            <p class="level-description">
+                                物理的現実が構築されるエネルギー的な枠組みあるいはマトリックス。顕現のための基本的なパターンや可能性を明示
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="level-card">
+                        <div class="level-number">5</div>
+                        <div class="level-content">
+                            <h3 class="level-title">集合的無意識</h3>
+                            <p class="level-description">人類または種属の共有された信念、思想、意向形態。集団的な枠組みと範囲に影響与える</p>
+                        </div>
+                    </div>
+                    
+                    <div class="level-card">
+                        <div class="level-number">6</div>
+                        <div class="level-content">
+                            <h3 class="level-title">個人的無意識</h3>
+                            <p class="level-description">個人の経験意識の記憶とパターン。しばしば幼少期の経験から生み出された、意識下にある信念システムを含む</p>
+                        </div>
+                    </div>
+                    
+                    <div class="level-card">
+                        <div class="level-number">7</div>
+                        <div class="level-content">
+                            <h3 class="level-title">信念（観念）</h3>
+                            <p class="level-description">
+                                現実に対する意識的および無意識的な定義と信念。創造の原動力となるプログラミングの主な枠組みを形成
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="level-card">
+                        <div class="level-number">8</div>
+                        <div class="level-content">
+                            <h3 class="level-title">感情</h3>
+                            <p class="level-description">
+                                信念と自己との間の合格または不合格の回路反応。ナビゲーションシステムとして機能
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="level-card">
+                        <div class="level-number">9</div>
+                        <div class="level-content">
+                            <h3 class="level-title">思考</h3>
+                            <p class="level-description">信念と感情から生じる精神的な構造。物理世界での具体的な行動と現実につながる</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-column">
+                <div class="process-panel">
+                    <div class="panel-title">
+                        <i class="fas fa-stream"></i> 現実創造における意識階層の役割
+                    </div>
+                    
+                    <div class="process-steps">
+                        <div class="section-title" style="font-size: 16px; margin-bottom: 10px;">
+                            <i class="fas fa-sort-amount-down"></i> 創造のカスケードプロセス
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-icon yellow-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4 class="step-title">オーバーソウルと魂のレベル</h4>
+                                <p class="step-description">
+                                    純粋な創造エネルギーと大きな意図が形成される源。ここから個人の人生の青写真と可能性が設定される
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-icon purple-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4 class="step-title">ハイヤーマインド</h4>
+                                <p class="step-description">
+                                    魂の意図を翻訳し、ワクワクの感覚を通して物理的自己に情報を提供する。「何を」創造するかを知っている部分
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-icon blue-icon">
+                                <i class="fas fa-cubes"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4 class="step-title">テンプレートレベル</h4>
+                                <p class="step-description">
+                                    物理的現実の可能性のエネルギーのマトリックスを形成。ハイヤーマインドの意図が構造化されるレベル
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-icon green-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4 class="step-title">無意識レベル</h4>
+                                <p class="step-description">
+                                    集合的・個的な条件付けや信念パターンが、意図の速度や表現に影響する
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-icon orange-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4 class="step-title">信念（観念）</h4>
+                                <p class="step-description">
+                                    現実の基本的な青写真として機能。「〜は可能/不可能」「私は〜である/ない」といった定義が体験可能な現実の範囲を決定
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-icon pink-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4 class="step-title">感情</h4>
+                                <p class="step-description">信念から発生し、エネルギー的な情報源として機能。内的状態が外的現実に整合しているかのようなフィードバック機構</p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-icon red-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="step-content">
+                                <h4 class="step-title">思考と行動</h4>
+                                <p class="step-description">最終的なフィルターとして、物理世界での具体的な経験を形成する。感情の信号を具体的な形に変換</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relationship-card">
+                    <div class="card-header">
+                        <i class="fas fa-sync-alt" style="color: #3182ce;"></i> ハイヤーマインドとフィジカルマインドの関係
+                    </div>
+                    <div class="card-content">
+                        <div style="margin-bottom: 12px;">
+                            <span style="display: inline-block; width: 16px; height: 16px; border-radius: 50%; background-color: #c6f6d5; text-align: center; margin-right: 8px;">
+                                <i class="fas fa-check" style="color: #38a169; font-size: 10px;"></i>
+                            </span>
+                            <strong>理想的な相互作用</strong>
+                            <p style="margin-left: 24px; margin-top: 4px;">
+                                ハイヤーマインドが「何を」（ワクワクを生命力/アイデア）を提供します。フィジカルマインドの役割は、「今」を経験し、「どのように」や「なぜ」を理解しようとせずにワクワクを行動し、ハイヤーマインドを信頼することです。
+                            </p>
+                        </div>
+                        <div>
+                            <span style="display: inline-block; width: 16px; height: 16px; border-radius: 50%; background-color: #fed7d7; text-align: center; margin-right: 8px;">
+                                <i class="fas fa-exclamation-triangle" style="color: #e53e3e; font-size: 10px;"></i>
+                            </span>
+                            <strong>一般的な問題</strong>
+                            <p style="margin-left: 24px; margin-top: 4px;">
+                                創造プロセスの最大の障害は、フィジカルマインド（エゴ）がコントロールを主張し、ハイヤーマインドの導きを無視したり曇らせたりすることです。これにより、創造の流れが硬くなり、魂の意図と不整合な現実が生み出されます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
